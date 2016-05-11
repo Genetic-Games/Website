@@ -21,3 +21,16 @@ AddEncoding gzip .jsgz
 AddEncoding gzip .datagz
 AddEncoding gzip .memgz
 AddEncoding gzip .unity3dgz
+
+ErrorDocument 400 /error.html
+ErrorDocument 401 /error.html
+ErrorDocument 403 /error.html
+ErrorDocument 404 /not_found.html
+ErrorDocument 405 /error.html
+ErrorDocument 406 /error.html
+ErrorDocument 500 /error.html
+
+AddType application/octet-stream .zip
+AddType application/octet-stream .app/
+
+Options -Indexes
