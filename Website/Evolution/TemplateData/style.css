@@ -188,14 +188,15 @@ body {
 }
 #body div div .featured {
 	height: auto;
-	width: auto;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	position: relative;
+    text-align: center;
 }
 #body div div .featured canvas {
     background-color: black;
-	display: flex;
+	display: inline;
     justify-content: center;
     width: 900px;
     height: 600px;
