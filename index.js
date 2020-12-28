@@ -1,0 +1,44 @@
+/*
+ * Main Node Application and Event Handler for Genetic Games Website
+ */
+
+console.log('Starting application');
+
+// Dependencies
+var express = require('express'); // Express web server framework
+var path = require('path'); // URI and local file paths
+var cors = require('cors'); // Cross-origin resource sharing
+var vash = require('vash'); // Templating and building HTML files to render
+
+// Custom Modules
+const customModulePath = path.join(__dirname, 'modules');
+// TODO - Create these modules
+// var error = require(path.join(customModulePath, 'error.js'));
+// var home = require(path.join(customModulePath, 'home.js'));
+
+// Setup Page Handling
+const staticFilesPath = path.join(__dirname, 'public');
+const viewsFilesPath = path.join(__dirname, 'views');
+
+var app = express();
+app.use(express.static(staticFilesPath))
+.use(cors())
+.use(express.urlencoded({ extended: true }));
+
+// Setup Templating Views
+app.set('view engine', 'vash')
+ .set('views', viewsFilesPath);
+
+// Home Logic
+// TODO - Use this to get the home page
+// app.get('/home', home.getHomePage);
+
+// Error Handling
+// TODO - Use these to get various error pages
+// app.use('/access_denied', error.handleAccessNotAllowed);
+// app.use(error.handlePageNotFound);
+// app.use(error.handleUnexpectedError);
+
+// Listening Port
+console.log('Listening for requests on port 80');
+app.listen(80);
