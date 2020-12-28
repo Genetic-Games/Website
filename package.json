@@ -1,0 +1,9 @@
+{
+  "name": "genetic-games-website",
+  "author": "Ian Santagata",
+  "description": "The open source code behind the website at geneticgames.org",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "github:Genetic-Games/Website"
+}
