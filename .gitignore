@@ -1,0 +1,6 @@
+# Secrets (Files Only)
+*.secret
+
+# Node
+node_modules/
+
