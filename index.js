@@ -17,6 +17,7 @@ const customModulePath = path.join(__dirname, 'modules');
 var home = require(path.join(customModulePath, 'home.js'));
 var about = require(path.join(customModulePath, 'about.js'));
 var news = require(path.join(customModulePath, 'news.js'));
+var games = require(path.join(customModulePath, 'games.js'));
 
 // Setup Page Handling
 const staticFilesPath = path.join(__dirname, 'public');
@@ -38,6 +39,7 @@ app.get('/home', home.getHomePage);
 // General Purpose Page Logic
 app.get('/about', about.getAboutPage);
 app.get('/news', news.getNewsPage);
+app.get('games', games.getGamesPage);
 
 // Error Handling
 // TODO - Use these to get various error pages
