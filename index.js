@@ -44,6 +44,9 @@ app.get('/games', games.getGamesPage);
 app.get('/credits', credits.getCreditsPage);
 app.get('/contact', contact.getContactPage);
 
+// Games Page Logic
+app.get('/games/Evolution', games.getGamePageForEvolution);
+
 // Error Handling
 app.use('/access_denied', error.handleAccessNotAllowed);
 app.use('/error', error.handleExpectedError);

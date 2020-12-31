@@ -2,7 +2,9 @@
 exports.getNewsPage = async function(req, res, next)
 {
     var pageData = {
-        selectedTab: "news"
+        pageTitle: "News",
+        selectedTab: "news",
+        faviconImagePath: "/images"
     };
 
     // Render the news page based on a template

@@ -2,7 +2,9 @@
 exports.getCreditsPage = async function(req, res, next)
 {
     var pageData = {
-        selectedTab: "credits"
+        pageTitle: "Credits",
+        selectedTab: "credits",
+        faviconImagePath: "/images"
     };
 
     // Render the credits page based on a template
