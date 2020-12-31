@@ -39,7 +39,7 @@ app.get('/home', home.getHomePage);
 // General Purpose Page Logic
 app.get('/about', about.getAboutPage);
 app.get('/news', news.getNewsPage);
-app.get('games', games.getGamesPage);
+app.get('/games', games.getGamesPage);
 
 // Error Handling
 // TODO - Use these to get various error pages
