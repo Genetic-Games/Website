@@ -1,21 +1,21 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
     <div id="body">
-  		<div>
-  			<div>
-  				<div class="news">
-  					<div class="content">
-  						<ul>
+      <div>
+        <div>
+          <div class="news">
+            <div class="content">
+              <ul>
                 <li>
                   <a name="upcoming"/>
                   <div class="header">
-  									<b>Upcoming Game Announcement</b>
+                    <b>Upcoming Game Announcement</b>
                     <i>December 2016</i>
-  								</div>
+                  </div>
                   <div class="article">
                     <div class="featured">
                       <a href="https://github.com/Genetic-Games/HeartAttack">
-                          <img src="/images/heart_attack_title.png" alt="">
+                        <img src="/images/heart_attack_title.png" alt="">
                       </a>
                     </div>
                     <p>
@@ -34,79 +34,79 @@
                   </div>
                 </li>
                 <li>
-  								<div class="header">
-  									<b>Upcoming Game Announcement</b>
+                  <div class="header">
+                    <b>Upcoming Game Announcement</b>
                     <i>May 2016</i>
-  								</div>
-  								<div class="article">
-  									<p>
-  										After the release of Evolution, we would like to announce our plans for several of our other games as well to encourage others to join in and give gamers an idea as to what is over the 8-bit horizon.
-                    </p>
-                    <p>
-                        At the moment, two games are in the planning phases.  One is a Frogger-like game called <i>Grogger</i> with questionably moral and humorous elements.  The other is <i>Drumpf Defense</i>, a tower defense game featuring the United States Presidential hopeful himself, the Donald.
-  									</p>
-                    <p>
-                        These are not the only games we are currently working on, and anyone willing to join is free to work on these or any other games they wish.
-                    </p>
-                    <p>
-                        There are currently no timelines in place for either of these games, but check back here often for updates as they arise!
-                        <a href="games" class="more">All Games</a>
-                    </p>
-  								</div>
-  							</li>
-  							<li>
-                  <a name="evolution"/>
-  								<div class="header">
-  									<b>The First Genetic Games Release!</b>
-                    <i>April 2016</i>
-  								</div>
-  								<div class="article">
-                      <div class="featured">
-  									  <a href="/games/Evolution" class="figure"><img src="/images/evolution_title.png" alt=""></a>
                   </div>
-  									<p>
-  										Evolution is the proud, first release by Genetic Games!  Through the eye piece of a microscope, you aim to witness evolution of a wily bacteria first-hand.
+                  <div class="article">
+                    <p>
+                      After the release of Evolution, we would like to announce our plans for several of our other games as well to encourage others to join in and give gamers an idea as to what is over the 8-bit horizon.
                     </p>
                     <p>
-                        This top-down 2D single player game puts you in the tiny driver seat behind a single mutated bacteria hell-bent on being nothing short of the fittest to survive in the whole, wide petri dish.
-  									</p>
-                    <p>
-                        Feel free to <a href="contact">send us feedback</a>!  For those of you that have sent us feedback so far, thank you!
+                      At the moment, two games are in the planning phases.  One is a Frogger-like game called <i>Grogger</i> with questionably moral and humorous elements.  The other is <i>Drumpf Defense</i>, a tower defense game featuring the United States Presidential hopeful himself, the Donald.
                     </p>
-  									<p>
-  										By Ian Santagata and Corey Topkis
+                    <p>
+                      These are not the only games we are currently working on, and anyone willing to join is free to work on these or any other games they wish.
+                    </p>
+                    <p>
+                      There are currently no timelines in place for either of these games, but check back here often for updates as they arise!
+                      <a href="games" class="more">All Games</a>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <a name="evolution"/>
+                  <div class="header">
+                    <b>The First Genetic Games Release!</b>
+                    <i>April 2016</i>
+                  </div>
+                  <div class="article">
+                    <div class="featured">
+                      <a href="/games/Evolution" class="figure"><img src="/images/evolution_title.png" alt=""></a>
+                    </div>
+                    <p>
+                      Evolution is the proud, first release by Genetic Games!  Through the eye piece of a microscope, you aim to witness evolution of a wily bacteria first-hand.
+                    </p>
+                    <p>
+                      This top-down 2D single player game puts you in the tiny driver seat behind a single mutated bacteria hell-bent on being nothing short of the fittest to survive in the whole, wide petri dish.
+                    </p>
+                    <p>
+                      Feel free to <a href="contact">send us feedback</a>!  For those of you that have sent us feedback so far, thank you!
+                    </p>
+                    <p>
+                      By Ian Santagata and Corey Topkis
                       <a href="/games/Evolution" class="more">Play Now!</a>
-  									</p>
-  								</div>
-  							</li>
-  							<li><a name="inauguration"/>
-  								<div class="header">
-  									<b>Genetic Games Inauguration</b>
+                    </p>
+                  </div>
+                </li>
+                <li><a name="inauguration"/>
+                  <div class="header">
+                    <b>Genetic Games Inauguration</b>
                     <i>February 2016</i>
-  								</div>
-  								<div class="article">
-  									<div class="featured">
+                  </div>
+                  <div class="article">
+                    <div class="featured">
                       <a href="/home" class="figure">
                         <img src="/images/gg_announcement.png" alt="">
                       </a>
                     </div>
-  									<p>
-  										And lo!  Out of the darkness rose a great project, one to rule with an iron fist over the ages, simply because it took itself too seriously.
-  									</p>
-  									<p>
-  										Wait what?  That's not us?  Damn.  Well, in February of 2016 is when we were born as a collective unit and where our growth from a small fledgling idea and a friend's name become what it is today (whatever that may happen to be).
-  									</p>
-  									<p>
-  										What, who, where, when, why, and how are we, you ask?  We're pretty good, thanks for asking.  But for semi-serious answers to your other questions, you will have to read more to find out!
+                    <p>
+                      And lo!  Out of the darkness rose a great project, one to rule with an iron fist over the ages, simply because it took itself too seriously.
+                    </p>
+                    <p>
+                      Wait what?  That's not us?  Damn.  Well, in February of 2016 is when we were born as a collective unit and where our growth from a small fledgling idea and a friend's name become what it is today (whatever that may happen to be).
+                    </p>
+                    <p>
+                      What, who, where, when, why, and how are we, you ask?  We're pretty good, thanks for asking.  But for semi-serious answers to your other questions, you will have to read more to find out!
                       <a href="/about" class="more">Read More</a>
-  									</p>
-  								</div>
-  							</li>
-  						</ul>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   })
 })
