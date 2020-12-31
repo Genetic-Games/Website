@@ -12,8 +12,7 @@ var vash = require('vash'); // Templating and building HTML files to render
 
 // Custom Modules
 const customModulePath = path.join(__dirname, 'modules');
-// TODO - Create these modules
-// var error = require(path.join(customModulePath, 'error.js'));
+var error = require(path.join(customModulePath, 'error.js'));
 var home = require(path.join(customModulePath, 'home.js'));
 var about = require(path.join(customModulePath, 'about.js'));
 var news = require(path.join(customModulePath, 'news.js'));
@@ -46,10 +45,10 @@ app.get('/credits', credits.getCreditsPage);
 app.get('/contact', contact.getContactPage);
 
 // Error Handling
-// TODO - Use these to get various error pages
-// app.use('/access_denied', error.handleAccessNotAllowed);
-// app.use(error.handlePageNotFound);
-// app.use(error.handleUnexpectedError);
+app.use('/access_denied', error.handleAccessNotAllowed);
+app.use('/error', error.handleExpectedError);
+app.use(error.handlePageNotFound);
+app.use(error.handleUnexpectedError);
 
 // Listening Port
 console.log('Listening for requests on port 80');

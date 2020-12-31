@@ -1,0 +1,27 @@
+@html.extend('layout', function(model) {
+  @html.block('content', function(model) {
+    <div id="body">
+      <div>
+        <div>
+          <div class="featured">
+            <img src="/images/not_found.jpg" alt="">
+          </div>
+          <div class="section">
+            <div>
+              <h3>Page Not Found</h3>
+              <div>
+                <p>
+                  We apologize, but we cannot seem to find what you are looking for.
+                </p>
+                <p>
+                  Maybe we can assist in some other way?  Perhaps a smoothie or a crisp high-five from our team of over-sized gorillas?  <a href="/contact">Do let us know!</a>
+                </p>
+                <p><a href="/home" class="more">Return Home</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  })
+})

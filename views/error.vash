@@ -1,0 +1,27 @@
+@html.extend('layout', function(model) {
+  @html.block('content', function(model) {
+    <div id="body">
+      <div>
+        <div>
+          <div class="featured">
+            <img src="/images/not_allowed.png" alt="">
+          </div>
+          <div class="section">
+            <div>
+              <h3>Request Error</h3>
+              <div>
+                <p>
+                  We apologize, but either we cannot let you access what you are requesting or there was an error in trying to process your request.
+                </p>
+                <p>
+                  Maybe we can assist in some other way?  Perhaps a smoothie or a crisp high-five from our team of over-sized gorillas?  <a href="/contact">Do let us know!</a>
+                </p>
+                <a href="/home" class="more">Return Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  })
+})
