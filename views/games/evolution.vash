@@ -1,0 +1,59 @@
+@html.extend('layout', function(model) {
+  @html.block('content', function(model) {
+    // <!-- TODO - Add the JavaScript to actually make the game work -->
+    // <!-- TODO - Fix the canvas to make it so that it doesn't stretch the page -->
+    <div id="body">
+      <div>
+        <div>
+          <div class="games">
+            <div class="content">
+              <h3>Evolution</h3>
+              <div class="featured">
+                <ul>
+                  <li>
+                    <canvas id="canvas" class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="900px"/>
+                  </li>
+                </ul>
+              </div>
+              <div class="section">
+                <h3>Alternate Platform Downloads</h3>
+                <ul class="platforms">
+                  <li>
+                    <a href="/builds/Windows_x86/Evolution_Windows_32-bit.zip">
+                      <img src="/images/windows.png" alt=""/>
+                      <p>Windows (32-bit)</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/builds/Windows_x86_64/Evolution_Windows_64-bit.zip">
+                      <img src="/images/windows.png" alt=""/>
+                      <p>Windows (64-bit)</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/builds/Mac_OSX/Evolution_Mac_OSX.zip">
+                      <img src="/images/apple.png" alt=""/>
+                      <p>Mac OSX</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/builds/Linux_x86/Evolution_Linux_32-bit.zip">
+                      <img src="/images/linux.png" alt=""/>
+                      <p>Linux (32-bit)</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/builds/Linux_x86_64/Evolution_Linux_64-bit.zip">
+                      <img src="/images/linux.png" alt=""/>
+                      <p>Linux (64-bit)</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  })
+})
