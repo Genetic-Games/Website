@@ -1,5 +1,5 @@
 body {
-	background: url(/Images/bg-body.jpg) repeat;
+	background: url(./images/bg-body.jpg) repeat;
 	color: #727272;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -10,17 +10,17 @@ body {
 	padding: 0;
 }
 #background {
-	background: url(/Images/bg-page.jpg) no-repeat top center;
+	background: url(./images/bg-page.jpg) no-repeat top center;
 	margin: 0;
 	padding: 0;
 }
 #header {
-	background: url(/Images/bg-header2.png) repeat-x top center;
+	background: url(./images/bg-header2.png) repeat-x top center;
 	margin: 0;
 	padding: 0;
 }
 #header > div {
-	background: url(/Images/bg-header.png) no-repeat top center;
+	background: url(./images/bg-header.png) no-repeat top center;
 	margin: 0;
 	padding: 0;
 }
@@ -41,7 +41,7 @@ body {
 	border: 0;
 }
 #header ul {
-	background: url(/Images/bg-navigation.png) no-repeat center center;
+	background: url(./images/bg-navigation.png) no-repeat center center;
 	margin: 15px 0 0;
 	overflow: hidden;
 	padding: 5px 20px;
@@ -55,7 +55,7 @@ body {
 	padding: 0;
 }
 #header ul li a {
-	background: url(/Images/menu.png) no-repeat;
+	background: url(./images/menu.png) no-repeat;
 	color: #a8a8a8;
 	display: flex;
 	font-family: 'Philosopher-Bold';
@@ -106,7 +106,7 @@ body {
 	background-position: -669px -113px;
 }
 #body {
-	background: url(/Images/bg-body-header.png) no-repeat top center;
+	background: url(./images/bg-body-header.png) no-repeat top center;
 	margin: 0 auto;
 	padding: 1.8% 0 0;
 	width: 50%;
@@ -123,12 +123,12 @@ body {
 	color: #a3a3a3;
 }
 #body > div {
-	background: url(/Images/bg-body-footer.png) no-repeat bottom center;
+	background: url(./images/bg-body-footer.png) no-repeat bottom center;
 	margin: 1% 0 0;
 	padding: 0 0 5%;
 }
 #body > div > div {
-	background: url(/Images/bg-body2.png) repeat-y top center;
+	background: url(./images/bg-body2.png) repeat-y top center;
 	min-height: 400px;
 	margin: 0;
 	padding: 0;
@@ -148,21 +148,21 @@ body {
 	position: relative;
 }
 #body div div .section {
-	background: #0a0a0a url(/Images/gradient.png) repeat-x bottom center;
+	background: #0a0a0a url(./images/gradient.png) repeat-x bottom center;
 	margin: 0 auto;
 	overflow: auto;
 	padding: 2%;
 	width: auto;
 }
 #body div div .section > div {
-	background: url(/Images/border.gif) repeat-x top left;
+	background: url(./images/border.gif) repeat-x top left;
 	float: left;
 	margin: 0;
 	padding: 0;
 	width: auto;
 }
 #body div div .section div h4 {
-	background: #070707 url(/Images/gradient2.png) repeat-x top center;
+	background: #070707 url(./images/gradient2.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #fff;
 	font-size: 14px;
@@ -188,7 +188,7 @@ body {
 	color: #727272;
 }
 #body div div .section a.more {
-	background: url(/Images/bg-more.png) no-repeat center center;
+	background: url(./images/bg-more.png) no-repeat center center;
 	color: #bababa;
 	display: block;
 	height: auto;
@@ -206,11 +206,11 @@ body {
 	color: #a3a3a3;
 }
 #body div div .section div div p a.more:hover {
-	background: url(/Images/bg-more-hover.png) no-repeat center center;
+	background: url(./images/bg-more-hover.png) no-repeat center center;
 	color: #bababa;
 }
 #body div div .section div h3 {
-	background: #070707 url(/Images/gradient3.png) repeat-x top center;
+	background: #070707 url(./images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #ffffff;
 	font-family: 'Philosopher-Bold';
@@ -239,7 +239,7 @@ body {
 	display: block;
 }
 #body div div .section div div span {
-	background: #181a1a url(/Images/gradient4.png) repeat-x bottom left;
+	background: #181a1a url(./images/gradient4.png) repeat-x bottom left;
 	border-bottom: 1px solid #22272a;
 	border-left: 1px solid #22272a;
 	border-right: 1px solid #22272a;
@@ -269,7 +269,7 @@ body {
 	padding: 0;
 }
 #body .media h2 {
-	background: url(/Images/gradient2.png) repeat-x top center;
+	background: url(./images/gradient2.png) repeat-x top center;
     border: 1px solid #22272a;
 	margin: 0 0 10px;
 	padding: 0;
@@ -283,7 +283,7 @@ body {
     line-height: 50px;
 }
 #body .media h3 {
-	background: #070707 url(/Images/gradient3.png) repeat-x top center;
+	background: #070707 url(./images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #ffffff;
 	font-family: 'Philosopher-Bold';
@@ -338,7 +338,7 @@ body {
 	overflow: hidden;
 }
 #body .games h3 {
-	background: #070707 url(/Images/gradient3.png) repeat-x top left;
+	background: #070707 url(./images/gradient3.png) repeat-x top left;
 	border: 1px solid #22272a;
 	color: #ffffff;
 	font-family: 'Philosopher-Bold';
@@ -351,7 +351,7 @@ body {
 	text-align: center;
 }
 #body .games .content {
-	background: url(/Images/border.gif) repeat-x top left;
+	background: url(./images/border.gif) repeat-x top left;
 	float: left;
 	margin: 0;
 	padding: 0;
@@ -381,7 +381,7 @@ body {
     display: flex;
 }
 #body .games ul li span {
-	background: #181a1a url(/Images/gradient3.png) repeat-x bottom left;
+	background: #181a1a url(./images/gradient3.png) repeat-x bottom left;
 	border-top: 1px solid #22272a;
 	display: block;
 }
@@ -408,13 +408,13 @@ body {
 	padding: 0;
 }
 #body .about ul li {
-	background: url(/Images/border.gif) repeat-x top left;
+	background: url(./images/border.gif) repeat-x top left;
 	list-style: none;
 	margin: 10px 0;
 	padding: 0;
 }
 #body .about ul li h3 {
-	background: #070707 url(/Images/gradient3.png) repeat-x top center;
+	background: #070707 url(./images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #fff;
 	font-family: 'Philosopher-Regular';
@@ -463,7 +463,7 @@ body {
 	padding: 0;
 }
 #body .news .content {
-	background: url(/Images/border.gif) repeat-x top left;
+	background: url(./images/border.gif) repeat-x top left;
 	float: left;
 	margin: 0;
 	padding: 0;
@@ -472,7 +472,7 @@ body {
 	padding: 0 0 5px;
 }
 #body .news .content ul li .header {
-	background: #070707 url(/Images/gradient5.png) repeat-x top center;
+	background: #070707 url(./images/gradient5.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #ffffff;
 	font-size: 14px;
@@ -548,7 +548,7 @@ body {
     padding: 5px 0;
 }
 #body .news .content ul li .article p a.more {
-	background: url(/Images/bg-more.png) no-repeat center center;
+	background: url(./images/bg-more.png) no-repeat center center;
 	color: #bababa;
 	display: block;
 	height: auto;
@@ -566,14 +566,14 @@ body {
 	color: #fff;
 }
 #body .news .sidebar {
-	background: url(/Images/border.gif) repeat-x top left;
+	background: url(./images/border.gif) repeat-x top left;
 	float: left;
 	margin: 0 0 0 30px;
 	padding: 3px 0 0;
 	width: 280px;
 }
 #body .news .sidebar div {
-	background: #070707 url(/Images/gradient3.png) repeat-x top center;
+	background: #070707 url(./images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
 	height: 48px;
 	margin: 0 0 1px;
@@ -588,7 +588,7 @@ body {
 	width: 107px;
 }
 #body .news .sidebar div span:first-child {
-	background: url(/Images/border2.gif) repeat-y right top;
+	background: url(./images/border2.gif) repeat-y right top;
 }
 #body .news .sidebar div span a {
 	color: #727272;
@@ -616,7 +616,7 @@ body {
 	background: #181818;
 }
 #body .news .sidebar ul li {
-	background: url(/Images/border2.gif) repeat-x top left;
+	background: url(./images/border2.gif) repeat-x top left;
 	padding: 9px 19px 11px;
 }
 #body .news .sidebar ul li:first-child {
@@ -661,19 +661,19 @@ body {
 	color: #fff;
 }
 #footer {
-	background: url(/Images/bg-footer2.png) repeat-x bottom left;
+	background: url(./images/bg-footer2.png) repeat-x bottom left;
 	margin: 0;
 	padding: 0;
 }
 #footer > div {
-	background: url(/Images/bg-footer.png) no-repeat bottom center;
+	background: url(./images/bg-footer.png) no-repeat bottom center;
 	margin: 0;
 	text-align: center;
 	padding: 6% 0 0;
 	display: block;
 }
 #footer #brand {
-    background: url(/Images/gg_pattern.png) no-repeat center center;
+    background: url(./images/gg_pattern.png) no-repeat center center;
     padding: 50px 0 0;
     margin: 5px 0;
 }
@@ -684,7 +684,7 @@ body {
 	margin: 20px 0 40px;
 }
 #footer ul li {
-    background: url(/Images/icons.png) no-repeat center;
+    background: url(./images/icons.png) no-repeat center;
 	float: left;
 	list-style: none;
 }
