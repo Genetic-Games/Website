@@ -6,7 +6,7 @@ body {
 	line-height: 1;
 	margin: 0;
 	min-width: 900px;
-    max-width: 1920px;
+	max-width: 1920px;
 	padding: 0;
 }
 #background {
@@ -26,7 +26,7 @@ body {
 }
 #header > div > div {
 	height: 150px;
-    min-width: 900px;
+	min-width: 900px;
 	margin: 0 auto;
 	padding: 0 0 50px;
 	width: 50%;
@@ -46,7 +46,7 @@ body {
 	overflow: hidden;
 	padding: 5px 20px;
 	width: 865px;
-    float: left;
+	float: left;
 }
 #header ul li {
 	display: flex;
@@ -110,7 +110,7 @@ body {
 	margin: 0 auto;
 	padding: 1.8% 0 0;
 	width: 50%;
-    display: flex;
+	display: flex;
 }
 #body p {
 	margin: 0;
@@ -139,12 +139,21 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	text-align: center;
 }
 #body div div .featured img {
 	display: block;
 	width: 96%;
 	height: 96%;
 	padding: 2%;
+	position: relative;
+}
+#body div div .featured canvas {
+	background-color: black;
+	display: inline;
+	justify-content: center;
+	width: 900px;
+	height: 600px;
 	position: relative;
 }
 #body div div .section {
@@ -220,7 +229,7 @@ body {
 	letter-spacing: 0.07em;
 	line-height: 50px;
 	text-align: center;
-    text-decoration: none;
+	text-decoration: none;
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
@@ -270,17 +279,17 @@ body {
 }
 #body .media h2 {
 	background: url(./images/gradient2.png) repeat-x top center;
-    border: 1px solid #22272a;
+	border: 1px solid #22272a;
 	margin: 0 0 10px;
 	padding: 0;
-    color: #ffffff;
-    font-family: 'Philospher-Bold';
-    text-align: center;
-    font-size: 24px;
-    height: 50px;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    line-height: 50px;
+	color: #ffffff;
+	font-family: 'Philospher-Bold';
+	text-align: center;
+	font-size: 24px;
+	height: 50px;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	line-height: 50px;
 }
 #body .media h3 {
 	background: #070707 url(./images/gradient3.png) repeat-x top center;
@@ -298,14 +307,14 @@ body {
 	text-align: center;
 }
 #body .media img {
-    position: inline;
-    float: left;
-    padding: 0 10px 10px 0;
-    max-height: 200px;
-    max-width: 200px;
+	position: inline;
+	float: left;
+	padding: 0 10px 10px 0;
+	max-height: 200px;
+	max-width: 200px;
 }
 #body .media p {
-    position: inline;
+	position: inline;
 	line-height: 18px;
 	padding: 10px;
 }
@@ -315,12 +324,12 @@ body {
 	padding: 0;
 }
 #body .media ul li {
-    list-style: none;
-    background: #181818;
-    border: 0px solid #22272a;
+	list-style: none;
+	background: #181818;
+	border: 0px solid #22272a;
 	margin: 0 0 10px;
 	padding: 0;
-    min-height: 275px;
+	min-height: 275px;
 }
 #body .media div div ul li a.figure {
 	display: block;
@@ -360,7 +369,11 @@ body {
 	background: #181818;
 	border: 1px solid #22272a;
 	margin: 10px;
-    padding: 15px 15px 0;
+	padding: 15px 15px 0;
+}
+#body .games ul h4 {
+	text-align: center;
+	color: #a7a9ac
 }
 #body .games ul li {
 	border: 1px solid #22272a;
@@ -378,7 +391,7 @@ body {
 }
 #body .games ul li a.figure img {
 	border: 1px solid #000;
-    display: flex;
+	display: flex;
 }
 #body .games ul li span {
 	background: #181a1a url(./images/gradient3.png) repeat-x bottom left;
@@ -397,7 +410,7 @@ body {
 }
 #body .games .content span a {
 	font-size: 14px;
-    text-align: center;;
+	text-align: center;;
 	line-height: 40px;
 }
 #body .about {
@@ -425,7 +438,7 @@ body {
 	margin: 0 0 1px;
 	padding: 0 20px;
 	text-transform: capitalize;
-    text-align: center;
+	text-align: center;
 }
 #body .about ul li div {
 	background: #181818;
@@ -503,8 +516,8 @@ body {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
-    height: 20px;
-    width: 100px;
+	height: 20px;
+	width: 100px;
 }
 #body .news .content ul li .header a {
 	color: #bababa;
@@ -545,7 +558,7 @@ body {
 }
 #body .news .content ul li .article p {
 	line-height: 24px;
-    padding: 5px 0;
+	padding: 5px 0;
 }
 #body .news .content ul li .article p a.more {
 	background: url(./images/bg-more.png) no-repeat center center;
@@ -673,9 +686,9 @@ body {
 	display: block;
 }
 #footer #brand {
-    background: url(./images/gg_pattern.png) no-repeat center center;
-    padding: 50px 0 0;
-    margin: 5px 0;
+	background: url(./images/gg_pattern.png) no-repeat center center;
+	padding: 50px 0 0;
+	margin: 5px 0;
 }
 #footer ul {
 	padding: 0;
@@ -684,24 +697,24 @@ body {
 	margin: 20px 0 40px;
 }
 #footer ul li {
-    background: url(./images/icons.png) no-repeat center;
+	background: url(./images/icons.png) no-repeat center;
 	float: left;
 	list-style: none;
 }
 #footer ul li a {
 	color: #bababa;
-    text-align: center;
-    line-height: 7em;
+	text-align: center;
+	line-height: 7em;
 	text-decoration: none;
-    margin: 0 25px;
-    width: 75px;
-    height: 70px;
-    padding: 3px;
-    display: block;
-    font-size: 10px;
+	margin: 0 25px;
+	width: 75px;
+	height: 70px;
+	padding: 3px;
+	display: block;
+	font-size: 10px;
 }
 #footer ul li a:hover {
-    color: #ffffff;
+	color: #ffffff;
 }
 #footer p {
 	color: #ffffff;
