@@ -1,6 +1,8 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
-    // <!-- TODO - Add the JavaScript to actually make the game work -->
+
+    <script src="/scripts/games/evolution/UnityProgress.js"></script>
+
     // <!-- TODO - Fix the canvas to make it so that it doesn't stretch the page -->
     <div id="body">
       <div>
@@ -55,5 +57,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Begin scripts -->
+    <script type='text/javascript'>
+    var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        dataUrl: "/scripts/games/evolution/WebGL.data",
+        codeUrl: "/scripts/games/evolution/WebGL.js",
+        memUrl: "/scripts/games/evolution/WebGL.mem",
+    };
+    </script>
+    <script src="/scripts/games/evolution/UnityLoader.js"></script>
   })
 })
