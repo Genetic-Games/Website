@@ -14,7 +14,7 @@ var vash = require('vash'); // Templating and building HTML files to render
 const customModulePath = path.join(__dirname, 'modules');
 // TODO - Create these modules
 // var error = require(path.join(customModulePath, 'error.js'));
-// var home = require(path.join(customModulePath, 'home.js'));
+var home = require(path.join(customModulePath, 'home.js'));
 
 // Setup Page Handling
 const staticFilesPath = path.join(__dirname, 'public');
@@ -30,8 +30,8 @@ app.set('view engine', 'vash')
  .set('views', viewsFilesPath);
 
 // Home Logic
-// TODO - Use this to get the home page
-// app.get('/home', home.getHomePage);
+app.get('/', home.getHomePage);
+app.get('/home', home.getHomePage);
 
 // Error Handling
 // TODO - Use these to get various error pages
