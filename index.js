@@ -42,6 +42,7 @@ app.get('/about', about.getAboutPage);
 app.get('/news', news.getNewsPage);
 app.get('/games', games.getGamesPage);
 app.get('/credits', credits.getCreditsPage);
+app.get('/contact', credits.getContactPage);
 
 // Error Handling
 // TODO - Use these to get various error pages
