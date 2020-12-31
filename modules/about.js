@@ -1,7 +1,11 @@
 // About Logic
 exports.getAboutPage = async function(req, res, next)
 {
+    var pageData = {
+        selectedTab: "about"
+    };
+
     // Render the about page based on a template
     res.location('/about');
-    res.render('about');
+    res.render('about', pageData);
 };
