@@ -15,6 +15,7 @@ const customModulePath = path.join(__dirname, 'modules');
 // TODO - Create these modules
 // var error = require(path.join(customModulePath, 'error.js'));
 var home = require(path.join(customModulePath, 'home.js'));
+var about = require(path.join(customModulePath, 'about.js'));
 
 // Setup Page Handling
 const staticFilesPath = path.join(__dirname, 'public');
@@ -32,6 +33,9 @@ app.set('view engine', 'vash')
 // Home Logic
 app.get('/', home.getHomePage);
 app.get('/home', home.getHomePage);
+
+// General Purpose Page Logic
+app.get('/about', about.getAboutPage);
 
 // Error Handling
 // TODO - Use these to get various error pages
