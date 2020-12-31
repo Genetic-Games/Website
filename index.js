@@ -19,6 +19,7 @@ var about = require(path.join(customModulePath, 'about.js'));
 var news = require(path.join(customModulePath, 'news.js'));
 var games = require(path.join(customModulePath, 'games.js'));
 var credits = require(path.join(customModulePath, 'credits.js'));
+var contact = require(path.join(customModulePath, 'contact.js'));
 
 // Setup Page Handling
 const staticFilesPath = path.join(__dirname, 'public');
@@ -42,7 +43,7 @@ app.get('/about', about.getAboutPage);
 app.get('/news', news.getNewsPage);
 app.get('/games', games.getGamesPage);
 app.get('/credits', credits.getCreditsPage);
-app.get('/contact', credits.getContactPage);
+app.get('/contact', contact.getContactPage);
 
 // Error Handling
 // TODO - Use these to get various error pages
