@@ -413,6 +413,36 @@ body {
 	text-align: center;;
 	line-height: 40px;
 }
+#body .games .platforms {
+    -webkit-columns: 5;
+    -moz-columns: 5;
+    columns: 5;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 70px;
+}
+#body .games .platforms li {
+    list-style: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+#body .games .platforms p {
+    text-align: center;
+    padding: 4px;
+}
+#body .games .platforms img {
+    max-width: 100px;
+    max-height: 100px;
+    padding: 10px;
+}
+#body .games .platforms a {
+    text-decoration: none;
+    color: #a7a9ac;
+}
+#body .games .platforms a:hover {
+    color: #ffffff;
+}
 #body .about {
 	overflow: hidden;
 }
