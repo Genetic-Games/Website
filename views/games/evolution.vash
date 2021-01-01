@@ -1,9 +1,12 @@
 @html.extend('layout', function(model) {
   @html.block('content', function(model) {
 
-    <script src="/scripts/games/evolution/UnityProgress.js"></script>
+    <!-- Begin Scripts for WebGL Build -->
+    <script src="/builds/WebGL/UnityLoader.js"></script>
+    <script>
+      UnityLoader.instantiate("unityContainer", "/builds/WebGL/Builds.json");
+    </script>
 
-    // <!-- TODO - Fix the canvas to make it so that it doesn't stretch the page -->
     <div id="body">
       <div>
         <div>
@@ -13,7 +16,8 @@
               <div class="featured">
                 <ul>
                   <li>
-                    <canvas id="canvas" class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="900px"/>
+                    <!-- TODO - Fix the canvas to make it so that it doesn't stretch the page -->
+                    <div id="unityContainer" style="width: 900px; height: 600px; margin: auto"></div>
                   </li>
                 </ul>
               </div>
@@ -57,18 +61,5 @@
         </div>
       </div>
     </div>
-
-    <!-- Begin scripts -->
-    <script type='text/javascript'>
-    var Module = {
-        TOTAL_MEMORY: 268435456,
-        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-        compatibilitycheck: null,
-        dataUrl: "/scripts/games/evolution/WebGL.data",
-        codeUrl: "/scripts/games/evolution/WebGL.js",
-        memUrl: "/scripts/games/evolution/WebGL.mem",
-    };
-    </script>
-    <script src="/scripts/games/evolution/UnityLoader.js"></script>
   })
 })
