@@ -139,9 +139,8 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	text-align: center;
 }
-#body div div .featured img {
+#body div div .featured .image {
 	display: block;
 	width: 96%;
 	height: 96%;
