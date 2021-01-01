@@ -15,7 +15,7 @@
                   <div class="article">
                     <div class="featured">
                       <a href="https://github.com/Genetic-Games/HeartAttack">
-                        <img src="/images/heart_attack_title.png" alt="">
+                        <img class="image" src="/images/heart_attack_title.png" alt="">
                       </a>
                     </div>
                     <p>
@@ -62,7 +62,9 @@
                   </div>
                   <div class="article">
                     <div class="featured">
-                      <a href="/games/Evolution" class="figure"><img src="/images/evolution_title.png" alt=""></a>
+                      <a href="/games/Evolution" class="figure">
+                        <img class="image" src="/images/evolution_title.png" alt="">
+                      </a>
                     </div>
                     <p>
                       Evolution is the proud, first release by Genetic Games!  Through the eye piece of a microscope, you aim to witness evolution of a wily bacteria first-hand.
@@ -87,7 +89,7 @@
                   <div class="article">
                     <div class="featured">
                       <a href="/home" class="figure">
-                        <img src="/images/gg_announcement.png" alt="">
+                        <img class="image" src="/images/gg_announcement.png" alt="">
                       </a>
                     </div>
                     <p>

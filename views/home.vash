@@ -4,7 +4,7 @@
       <div>
         <div>
           <div class="featured">
-            <img src="/images/heart_attack_title.png" alt="">
+            <img class="image" src="/images/heart_attack_title.png" alt="">
           </div>
           <div class="section">
             <div>
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="featured">
-            <img src="/images/evolution_gameplay.png" alt="">
+            <img class="image" src="/images/evolution_gameplay.png" alt="">
           </div>
           <div class="section">
             <div>

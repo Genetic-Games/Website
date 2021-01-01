@@ -4,7 +4,7 @@
       <div>
         <div>
           <div class="featured">
-            <img src="/images/not_allowed.png" alt="">
+            <img class="image" src="/images/not_allowed.png" alt="">
           </div>
           <div class="section">
             <div>
