@@ -17,7 +17,7 @@
                 <ul>
                   <li>
                     <!-- TODO - Fix the canvas to make it so that it doesn't stretch the page -->
-                    <div id="unityContainer" style="width: 900px; height: 600px; margin: auto"></div>
+                    <div id="unityContainer"></div>
                   </li>
                 </ul>
               </div>
