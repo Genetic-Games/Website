@@ -1,4 +1,4 @@
-## Genetic Games Website - [!Build and Deploy](https://github.com/Genetic-Games/Website/workflows/main.yml/badge.svg)
+## Genetic Games Website - ![Build and Deploy](https://github.com/Genetic-Games/Website/workflows/Build%20and%20Deploy%20via%20Sync/badge.svg)
 
 This repository holds the code and assets used to render the website for Genetic Games.
 
