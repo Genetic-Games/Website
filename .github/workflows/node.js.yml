@@ -3,32 +3,26 @@ name: Build and Deploy via SFTP
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
 
-  buildAndDeploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     name: 'Build and Deploy'
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '12.x'
     - run: npm ci
     - run: npm run build --if-present
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@1.1
       with:
-        username: test
-        server: test
-        port: test
-        ssh_private_key: test
-        local_path: test
-        remote_path: test
-        args: test
+        username: ${{ secrets.SFTP_USERNAME }}
+        server: ${{ secrets.SFTP_SERVER }}
+        port: ${{ secrets.SFTP_PORT }}
+        ssh_private_key: ${{ secrets.SFTP_PRIVATE_SSH_KEY }}
+        remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
+        args: '-o ConnectTimeout=5'
