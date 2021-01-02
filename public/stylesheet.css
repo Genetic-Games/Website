@@ -407,16 +407,13 @@ body {
 }
 #body .games .content span a {
 	font-size: 14px;
-	text-align: center;;
+	text-align: center;
 	line-height: 40px;
 }
 #body .games .platforms {
     -webkit-columns: 5;
     -moz-columns: 5;
     columns: 5;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 70px;
 }
 #body .games .platforms li {
     list-style: none;
@@ -426,16 +423,18 @@ body {
 }
 #body .games .platforms p {
     text-align: center;
-    padding: 4px;
+    padding: 1%;
 }
 #body .games .platforms img {
-    max-width: 100px;
-    max-height: 100px;
-    padding: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    padding: 5%;
+	margin: 5%
 }
 #body .games .platforms a {
     text-decoration: none;
     color: #a7a9ac;
+	padding: 2%;
 }
 #body .games .platforms a:hover {
     color: #ffffff;
