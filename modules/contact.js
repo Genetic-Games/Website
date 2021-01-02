@@ -2,8 +2,7 @@
 exports.getContactPage = async function(req, res, next)
 {
     var pageData = {
-        pageTitle: "Contact",
-        faviconImagePath: "/images"
+        pageTitle: "Contact"
     };
 
     // Render the contact page based on a template

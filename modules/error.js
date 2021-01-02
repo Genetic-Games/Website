@@ -2,8 +2,7 @@
 exports.handlePageNotFound = function(req, res)
 {
     var pageData = {
-        pageTitle: "Not Found",
-        faviconImagePath: "/images"
+        pageTitle: "Not Found"
     };
 
     res.location('/not_found');
@@ -14,8 +13,7 @@ exports.handlePageNotFound = function(req, res)
 exports.handleAccessNotAllowed = function(req, res)
 {
     var pageData = {
-        pageTitle: "Not Allowed",
-        faviconImagePath: "/images"
+        pageTitle: "Not Allowed"
     };
 
     res.location('/access_denied');
@@ -26,8 +24,7 @@ exports.handleAccessNotAllowed = function(req, res)
 exports.handleExpectedError = function(req, res)
 {
     var pageData = {
-        pageTitle: "Error",
-        faviconImagePath: "/images"
+        pageTitle: "Error"
     };
 
     res.location('/error');
@@ -38,8 +35,7 @@ exports.handleExpectedError = function(req, res)
 exports.handleUnexpectedError = function(err, req, res, next)
 {
     var pageData = {
-        pageTitle: "Error",
-        faviconImagePath: "/images"
+        pageTitle: "Error"
     };
 
     // TODO - Eventually, log errors to a file on the server to have an error log

@@ -3,8 +3,7 @@ exports.getHomePage = async function(req, res, next)
 {
     var pageData = {
         pageTitle: "Home",
-        selectedTab: "home",
-        faviconImagePath: "/images"
+        selectedTab: "home"
     };
 
     // Render the home page based on a template

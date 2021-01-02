@@ -3,8 +3,7 @@ exports.getAboutPage = async function(req, res, next)
 {
     var pageData = {
         pageTitle: "About",
-        selectedTab: "about",
-        faviconImagePath: "/images"
+        selectedTab: "about"
     };
 
     // Render the about page based on a template

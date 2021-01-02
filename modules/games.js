@@ -3,8 +3,7 @@ exports.getGamesPage = async function(req, res, next)
 {
     var pageData = {
         pageTitle: "Games",
-        selectedTab: "games",
-        faviconImagePath: "/images"
+        selectedTab: "games"
     };
 
     // Render the games page based on a template
@@ -16,8 +15,7 @@ exports.getGamePageForEvolution = async function(req, res, next)
 {
     var pageData = {
         pageTitle: "Evolution",
-        selectedTab: "games",
-        faviconImagePath: "/images/games/evolution"
+        selectedTab: "games"
     };
 
     // Render the Evolution game page based on a template
