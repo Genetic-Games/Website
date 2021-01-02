@@ -1,4 +1,4 @@
-name: Build and Deploy via SFTP
+name: Build and Deploy via Sync
 
 on:
   push:
