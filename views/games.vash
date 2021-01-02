@@ -10,7 +10,7 @@
                 <ul>
                   <li>
                     <a href="/games/Evolution" class="figure">
-                      <img class="image" src="/images/evolution_background.png" alt="">
+                      <img class="image" src="/images/games/evolution/evolution_background.png" alt="">
                     </a>
                     <span>
                       <a href="/credits">By Ian Santagata and Corey Topkis</a>
@@ -23,7 +23,7 @@
                 <ul>
                   <li>
                     <a href="/news#upcoming" class="figure">
-                      <img class="image" src="/images/heart_attack_title.png" alt="">
+                      <img class="image" src="/images/games/heart_attack/heart_attack_title.png" alt="">
                     </a>
                     <span>
                       <a href="/news#upcoming">Heart Attack</a>

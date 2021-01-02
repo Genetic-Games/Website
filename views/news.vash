@@ -15,7 +15,7 @@
                   <div class="article">
                     <div class="featured">
                       <a href="https://github.com/Genetic-Games/HeartAttack">
-                        <img class="image" src="/images/heart_attack_title.png" alt="">
+                        <img class="image" src="/images/games/heart_attack/heart_attack_title.png" alt="">
                       </a>
                     </div>
                     <p>
@@ -63,7 +63,7 @@
                   <div class="article">
                     <div class="featured">
                       <a href="/games/Evolution" class="figure">
-                        <img class="image" src="/images/evolution_title.png" alt="">
+                        <img class="image" src="/images/games/evolution/evolution_title.png" alt="">
                       </a>
                     </div>
                     <p>
