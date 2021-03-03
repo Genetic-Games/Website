@@ -3,25 +3,31 @@
     <div id="body">
       <div>
         <div>
-          <div class="section">
-            <div>
-              <h3>Contact Us</h3>
+          <div class="media">
+            <div class="section">
               <div>
-                <p>
-                  Interested in Contacting Genetic Games? Look no further!
-                </p>
-                <p>
-                  To get involved in the Genetic Games project, complain to us about your country's politics, reminisce about how nothing will ever be as good as it was in the '90s, or inquiring whether we will walk your elderly grandmother across the street every morning at 6:49 on the corner of Conch and Coral, send us an e-mail!
-                </p>
-                <p>
-                  You can manually e-mail <a href="mailto:admin@geneticgames.com">admin@geneticgames.com</a> like some kind of plebeian or you can click the link instead.
-                </p>
-                <p>
-                  Do not hesitate to reach out to us! Regardless of our sarcastic tendencies, we are pretty nice people all-around.
-                </p>
-                <p>
-                  We look forward to hearing from you!
-                </p>
+                <h3>Contact Us</h3>
+                <img class="figure" src="/images/contact.png" alt=""/>
+                <div>
+                  <p>
+                    Interested in Contacting Genetic Games? Look no further!
+                  </p>
+                  <p>
+                    To get involved in the Genetic Games project, complain to us about your country's politics, reminisce about how nothing will ever be as good as it was in the '90s, or inquiring whether we will walk your elderly grandmother across the street every morning at 6:49 on the corner of Conch and Coral, send us an e-mail!
+                  </p>
+                  <p>
+                    You can manually e-mail <a href="mailto:admin@geneticgames.com">admin@geneticgames.com</a> like some kind of plebeian or you can click the link instead.
+                  </p>
+                  <p>
+                    We promise our team of highly trained Labrador Retrievers will fetch your e-mail and deliver it to us as quickly as they can. The harder part is getting them to drop it.
+                  </p>
+                  <p>
+                    Do not hesitate to reach out to us! Regardless of our sarcastic and occasionally absurd tendencies, we are pretty nice people all-around.
+                  </p>
+                  <p>
+                    We look forward to hearing from you!
+                  </p>
+                </div>
               </div>
             </div>
           </div>

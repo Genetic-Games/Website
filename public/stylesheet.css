@@ -306,7 +306,7 @@ body {
 #body .media img {
 	position: inline;
 	float: left;
-	padding: 0 10px 10px 0;
+	padding: 15px;
 	max-height: 200px;
 	max-width: 200px;
 }
