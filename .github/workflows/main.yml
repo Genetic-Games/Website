@@ -28,8 +28,3 @@ jobs:
         ARGS_MORE: '--exclude=/node_modules/'
         MODE: push
         RUN_SCRIPT_ON: source
-        PRE_SCRIPT: |
-          echo ${{ secrets.SYNC_SERVER }}
-          echo ${{ secrets.SYNC_PORT }}
-          echo ${{ secrets.SYNC_USER }}
-          echo ${{ secrets.SYNC_TARGET_PATH }}
