@@ -4,4 +4,4 @@
 
 This repository holds the code and related assets used to render the website for Genetic Games.
 
-The website can be found here - http://geneticgames.org
+The website can be found here - https://geneticgames.org
