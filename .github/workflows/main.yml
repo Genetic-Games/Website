@@ -40,15 +40,16 @@ jobs:
       uses: appleboy/ssh-action@v0.1.4
       env:
         NODE_VERSION: 12
-        NODE_VENV_PATH: ~/nodevenv/node
+        HOME_DIRECTORY: ${{ secrets.HOME_DIRECTORY_PATH }}
       with:
         host: ${{ secrets.SYNC_SERVER }}
         port: ${{ secrets.SYNC_PORT }}
         username: ${{ secrets.SYNC_USER }}
         key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
         script_stop: true
-        envs: NODE_VERSION, NODE_VENV_PATH
+        envs: NODE_VERSION, HOME_DIRECTORY
         script: |
+          NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
           NPM_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
           $NPM_PATH/npm install $NODE_MODULES_PATH
@@ -57,17 +58,18 @@ jobs:
       uses: appleboy/ssh-action@v0.1.4
       env:
         NODE_VERSION: 12
-        NODE_VENV_PATH: ~/nodevenv/node
+        HOME_DIRECTORY: ${{ secrets.HOME_DIRECTORY_PATH }}
         CODE_PATH: ${{ secrets.SYNC_TARGET_PATH }}
-        SELECTOR_PATH: /usr/sbin
       with:
         host: ${{ secrets.SYNC_SERVER }}
         port: ${{ secrets.SYNC_PORT }}
         username: ${{ secrets.SYNC_USER }}
         key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
         script_stop: true
-        envs: NODE_VERSION, NODE_VENV_PATH, CODE_PATH, SELECTOR_PATH
+        envs: NODE_VERSION, HOME_DIRECTORY, CODE_PATH
         script: |
+          NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           VENV_ACTIVATION_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
+          SELECTOR_PATH=/usr/sbin
           source $VENV_ACTIVATION_PATH/activate && cd $CODE_PATH
           $SELECTOR_PATH/cloudlinux-selector restart --json --interpreter nodejs --app-root $CODE_PATH
