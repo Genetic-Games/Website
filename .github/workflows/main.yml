@@ -60,6 +60,8 @@ jobs:
           fi
           if [ "$CODE_PATH/package.json" != "$(readlink $NODE_MODULES_PATH/package.json)" ]; then
               echo "Unexpected link location for file: 'package.json'."
+              echo "File location: '$CODE_PATH/package.json'"
+              echo "Symlink location: $(readlink $NODE_MODULES_PATH/package.json)"
           fi
           if [ ! -L "$NODE_MODULES_PATH/package-lock.json" ] || [ ! -e "$NODE_MODULES_PATH/package-lock.json" ]; then
               echo "Expected symbolic link to file 'package-lock.json', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
