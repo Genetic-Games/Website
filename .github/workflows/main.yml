@@ -52,8 +52,8 @@ jobs:
           NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
           NPM_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
-          ln -fs $CODE_PATH/package.json $NODE_MODULES_PATH/package.json
-          ln -fs $CODE_PATH/package-lock.json $NODE_MODULES_PATH/package-lock.json
+          ln -fs $CODE_PATH/package.json $NODE_MODULES_PATH/
+          ln -fs $CODE_PATH/package-lock.json $NODE_MODULES_PATH/
           $NPM_PATH/npm install $NODE_MODULES_PATH
 
     - name: Remote Server Restart via SSH
