@@ -48,7 +48,7 @@ jobs:
         username: ${{ secrets.SYNC_USER }}
         key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
         script_stop: true
-        envs: NODE_VERSION, HOME_DIRECTORY
+        envs: NODE_VERSION, HOME_DIRECTORY, CODE_PATH
         script: |
           NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
