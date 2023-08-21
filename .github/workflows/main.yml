@@ -40,22 +40,24 @@ jobs:
       uses: appleboy/ssh-action@v0.1.4
       env:
         NODE_VERSION: 12
-        NODE_MODULES_PATH: ~/nodevenv/node/${NODE_VERSION}/lib
-        NPM_PATH: ~/nodevenv/node/${NODE_VERSION}/bin
+        NODE_VENV_PATH: ~/nodevenv/node
       with:
         host: ${{ secrets.SYNC_SERVER }}
         port: ${{ secrets.SYNC_PORT }}
         username: ${{ secrets.SYNC_USER }}
         key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
         script_stop: true
-        envs: NODE_VERSION, NODE_MODULES_PATH, NPM_PATH
-        script: $NPM_PATH/npm install $NODE_MODULES_PATH
+        envs: NODE_VERSION, NODE_VENV_PATH
+        script: |
+          NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
+          NPM_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
+          $NPM_PATH/npm install $NODE_MODULES_PATH
 
     - name: Remote Server Restart via SSH
       uses: appleboy/ssh-action@v0.1.4
       env:
         NODE_VERSION: 12
-        VENV_ACTIVATION_PATH: ~/nodevenv/node/${NODE_VERSION}/bin
+        NODE_VENV_PATH: ~/nodevenv/node
         CODE_PATH: ${{ secrets.SYNC_TARGET_PATH }}
         SELECTOR_PATH: /usr/sbin
       with:
@@ -64,7 +66,8 @@ jobs:
         username: ${{ secrets.SYNC_USER }}
         key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
         script_stop: true
-        envs: NODE_VERSION, VENV_ACTIVATION_PATH, CODE_PATH, SELECTOR_PATH
+        envs: NODE_VERSION, NODE_VENV_PATH, CODE_PATH, SELECTOR_PATH
         script: |
+          VENV_ACTIVATION_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
           source $VENV_ACTIVATION_PATH/activate && cd $CODE_PATH
           $SELECTOR_PATH/cloudlinux-selector restart --json --interpreter nodejs --app-root $CODE_PATH
