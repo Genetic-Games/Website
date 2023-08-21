@@ -52,8 +52,15 @@ jobs:
           NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
           NPM_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
-          sudo ln -fs $CODE_PATH/package.json $NODE_MODULES_PATH/
-          sudo ln -fs $CODE_PATH/package-lock.json $NODE_MODULES_PATH/
+          if [ ! -L $NODE_MODULES_PATH/package.json ] || [ ! -e $NODE_MODULES_PATH/package.json ]; then
+              echo "Expected symbolic link to file 'package.json', but no symbolic link file was found, or it is broken."
+              echo "Cannot execute remote install without reference to file: 'package.json'."
+              return 1
+          elif [ ! -L $NODE_MODULES_PATH/package-lock.json ] || [ ! -e $NODE_MODULES_PATH/package-lock.json ]; then
+              echo "Expected symbolic link to file 'package-lock.json', but no symbolic link file was found, or it is broken."
+              echo "Cannot execute remote install without reference to file: 'package-lock.json'."
+              return 1
+          fi
           $NPM_PATH/npm install $NODE_MODULES_PATH
 
     - name: Remote Server Restart via SSH
