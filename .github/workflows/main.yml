@@ -35,6 +35,40 @@ jobs:
         MODE: push
         RUN_SCRIPT_ON: source
         VERBOSE: true
+
+    - name: Verify Symbolic Links via SSH
+      uses: appleboy/ssh-action@v0.1.4
+      env:
+        NODE_VERSION: 14
+        HOME_DIRECTORY: ${{ secrets.HOME_DIRECTORY_PATH }}
+        CODE_PATH: ${{ secrets.SYNC_TARGET_PATH }}
+      with:
+        host: ${{ secrets.SYNC_SERVER }}
+        port: ${{ secrets.SYNC_PORT }}
+        username: ${{ secrets.SYNC_USER }}
+        key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
+        script_stop: true
+        envs: NODE_VERSION, HOME_DIRECTORY
+        script: |
+          NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
+          NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
+          RETURN_CODE=0
+          if [ ! -L $NODE_MODULES_PATH/package.json ] || [ ! -e $NODE_MODULES_PATH/package.json ] || [ "$CODE_PATH/package.json" != $(readlink $NODE_MODULES_PATH/package.json) ]; then
+              echo "Expected symbolic link to file 'package.json', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
+              echo "Cannot execute remote install without reference to file: 'package.json'."
+              RETURN_CODE=1
+          fi
+          if [ ! -L $NODE_MODULES_PATH/package-lock.json ] || [ ! -e $NODE_MODULES_PATH/package-lock.json ] || [ "$CODE_PATH/package-lock.json" != $(readlink $NODE_MODULES_PATH/package-lock.json) ]; then
+              echo "Expected symbolic link to file 'package-lock.json', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
+              echo "Cannot execute remote install without reference to file: 'package-lock.json'."
+              RETURN_CODE=1
+          fi
+          if [ ! -L $CODE_PATH/node_modules ] || [ ! -e $CODE_PATH/node_modules ] || [ "$NODE_MODULES_PATH/node_modules" != $(readlink $CODE_PATH/node_modules) ]; then
+            echo "Expected symbolic link to folder 'node_modules/', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
+            echo "Cannot execute remote server restart without reference to folder: 'node_modules/"."
+            RETURN_CODE=1
+          fi
+          return RETURN_CODE
         
     - name: Remote Package Install via SSH
       uses: appleboy/ssh-action@v0.1.4
@@ -52,15 +86,6 @@ jobs:
           NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
           NPM_PATH=$NODE_VENV_PATH/$NODE_VERSION/bin
-          if [ ! -L $NODE_MODULES_PATH/package.json ] || [ ! -e $NODE_MODULES_PATH/package.json ]; then
-              echo "Expected symbolic link to file 'package.json', but no symbolic link file was found, or it is broken."
-              echo "Cannot execute remote install without reference to file: 'package.json'."
-              return 1
-          elif [ ! -L $NODE_MODULES_PATH/package-lock.json ] || [ ! -e $NODE_MODULES_PATH/package-lock.json ]; then
-              echo "Expected symbolic link to file 'package-lock.json', but no symbolic link file was found, or it is broken."
-              echo "Cannot execute remote install without reference to file: 'package-lock.json'."
-              return 1
-          fi
           $NPM_PATH/npm install $NODE_MODULES_PATH
 
     - name: Remote Server Restart via SSH
