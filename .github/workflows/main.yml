@@ -52,23 +52,23 @@ jobs:
         script: |
           NODE_VENV_PATH=$HOME_DIRECTORY/nodevenv/node
           NODE_MODULES_PATH=$NODE_VENV_PATH/$NODE_VERSION/lib
-          RETURN_CODE=0
+          EXIT_CODE=0
           if [ ! -L $NODE_MODULES_PATH/package.json ] || [ ! -e $NODE_MODULES_PATH/package.json ] || [ "$CODE_PATH/package.json" != $(readlink $NODE_MODULES_PATH/package.json) ]; then
               echo "Expected symbolic link to file 'package.json', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
               echo "Cannot execute remote install without reference to file: 'package.json'."
-              RETURN_CODE=1
+              EXIT_CODE=1
           fi
           if [ ! -L $NODE_MODULES_PATH/package-lock.json ] || [ ! -e $NODE_MODULES_PATH/package-lock.json ] || [ "$CODE_PATH/package-lock.json" != $(readlink $NODE_MODULES_PATH/package-lock.json) ]; then
               echo "Expected symbolic link to file 'package-lock.json', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
               echo "Cannot execute remote install without reference to file: 'package-lock.json'."
-              RETURN_CODE=1
+              EXIT_CODE=1
           fi
           if [ ! -L $CODE_PATH/node_modules ] || [ ! -e $CODE_PATH/node_modules ] || [ "$NODE_MODULES_PATH/node_modules" != $(readlink $CODE_PATH/node_modules) ]; then
             echo "Expected symbolic link to folder 'node_modules/', but the symbolic link file was not found, is broken, or is pointing to the incorrect path."
             echo "Cannot execute remote server restart without reference to folder: 'node_modules/'."
-            RETURN_CODE=1
+            EXIT_CODE=1
           fi
-          return RETURN_CODE
+          exit EXIT_CODE
         
     - name: Remote Package Install via SSH
       uses: appleboy/ssh-action@v0.1.4
