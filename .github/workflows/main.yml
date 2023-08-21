@@ -40,8 +40,8 @@ jobs:
       uses: appleboy/ssh-action@v0.1.4
       env:
         NODE_VERSION: 12
-        NODE_MODULES_PATH: ~/nodevenv/node/$NODE_VERSION/lib
-        NPM_PATH: ~/nodevenv/node/$NODE_VERSION/bin
+        NODE_MODULES_PATH: ~/nodevenv/node/${NODE_VERSION}/lib
+        NPM_PATH: ~/nodevenv/node/${NODE_VERSION}/bin
       with:
         host: ${{ secrets.SYNC_SERVER }}
         port: ${{ secrets.SYNC_PORT }}
@@ -55,7 +55,7 @@ jobs:
       uses: appleboy/ssh-action@v0.1.4
       env:
         NODE_VERSION: 12
-        VENV_ACTIVATION_PATH: ~/nodevenv/node/$NODE_VERSION/bin
+        VENV_ACTIVATION_PATH: ~/nodevenv/node/${NODE_VERSION}/bin
         CODE_PATH: ${{ secrets.SYNC_TARGET_PATH }}
         SELECTOR_PATH: /usr/sbin
       with:
