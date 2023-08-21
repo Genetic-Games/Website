@@ -34,3 +34,37 @@ jobs:
         SSH_ARGS: '-p ${{ secrets.SYNC_PORT }} -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedKeyTypes=+ssh-rsa -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o LogLevel=quiet'
         MODE: push
         RUN_SCRIPT_ON: source
+        VERBOSE: true
+        
+    - name: Remote Package Install via SSH
+      uses: appleboy/ssh-action@v0.1.4
+      env:
+        NODE_VERSION: 12
+        NODE_MODULES_PATH: ~/nodevenv/node/$NODE_VERSION/lib
+        NPM_PATH: ~/nodevenv/node/$NODE_VERSION/bin
+      with:
+        host: ${{ secrets.SYNC_SERVER }}
+        port: ${{ secrets.SYNC_PORT }}
+        username: ${{ secrets.SYNC_USER }}
+        key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
+        script_stop: true
+        envs: NODE_VERSION, NODE_MODULES_PATH, NPM_PATH
+        script: $NPM_PATH/npm install $NODE_MODULES_PATH
+
+    - name: Remote Server Restart via SSH
+      uses: appleboy/ssh-action@v0.1.4
+      env:
+        NODE_VERSION: 12
+        VENV_ACTIVATION_PATH: ~/nodevenv/node/$NODE_VERSION/bin
+        CODE_PATH: ${{ secrets.SYNC_TARGET_PATH }}
+        SELECTOR_PATH: /usr/sbin
+      with:
+        host: ${{ secrets.SYNC_SERVER }}
+        port: ${{ secrets.SYNC_PORT }}
+        username: ${{ secrets.SYNC_USER }}
+        key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
+        script_stop: true
+        envs: NODE_VERSION, VENV_ACTIVATION_PATH, CODE_PATH, SELECTOR_PATH
+        script: |
+          source $VENV_ACTIVATION_PATH/activate && cd $CODE_PATH
+          $SELECTOR_PATH/cloudlinux-selector restart --json --interpreter nodejs --app-root $CODE_PATH
