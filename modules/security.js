@@ -5,7 +5,6 @@ var path = require('path'); // URI and local file paths
 exports.removeInsecureHeaders = function(req, res, next)
 {
     res.removeHeader('X-Powered-By');
-    res.removeHeader('X-Turbo-Charged-By');
     next();
 }
 
