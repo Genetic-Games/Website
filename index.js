@@ -23,6 +23,7 @@ var news = require(path.join(customModulePath, 'news.js'));
 var games = require(path.join(customModulePath, 'games.js'));
 var credits = require(path.join(customModulePath, 'credits.js'));
 var contact = require(path.join(customModulePath, 'contact.js'));
+var security = require(path.join(customModulePath, 'security.js'));
 
 // Setup Page Handling
 const staticFilesPath = path.join(__dirname, 'public');
@@ -36,6 +37,9 @@ app.use(express.static(staticFilesPath))
 // Setup Templating Views
 app.set('view engine', 'vash')
   .set('views', viewsFilesPath);
+
+// Set Default Response HTTP Headers
+app.use(security.addSecurityHeaders);
 
 // Home Logic
 app.get('/', home.getHomePage);
