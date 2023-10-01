@@ -38,7 +38,8 @@ app.use(express.static(staticFilesPath))
 app.set('view engine', 'vash')
   .set('views', viewsFilesPath);
 
-// Set Default Response HTTP Headers
+// Set / Unset HTTP Response Headers
+app.use(security.removeInsecureHeaders);
 app.use(security.addSecurityHeaders);
 
 // Home Logic
