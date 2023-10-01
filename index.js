@@ -3,15 +3,16 @@
  */
 
 // Start Server
-// Logging the same way as log.js, just without setting anything up in case something is wrong before that point
-var currentDateTime = new Date().toISOString();
-console.log(`[ ${currentDateTime} ] - Starting application`);
+console.log('Starting application');
 
 // Dependencies
 var express = require('express'); // Express web server framework
 var path = require('path'); // URI and local file paths
 var cors = require('cors'); // Cross-origin resource sharing
 var vash = require('vash'); // Templating and building HTML files to render
+var helmet = require('helmet'); // HTTP header security
+
+console.log('Imported major dependencies');
 
 // Custom Modules
 const customModulePath = path.join(__dirname, 'modules');
@@ -23,24 +24,46 @@ var news = require(path.join(customModulePath, 'news.js'));
 var games = require(path.join(customModulePath, 'games.js'));
 var credits = require(path.join(customModulePath, 'credits.js'));
 var contact = require(path.join(customModulePath, 'contact.js'));
-var security = require(path.join(customModulePath, 'security.js'));
+
+log.logMessage('Imported custom modules');
 
 // Setup Page Handling
 const staticFilesPath = path.join(__dirname, 'public');
 const viewsFilesPath = path.join(__dirname, 'views');
 
-var app = express();
+// Setup Application
+const helmetConfiguration = {
+    contentSecurityPolicy: {
+        directives: {
+            "worker-src": [
+                "blob:",
+                "'self'",
+                "'unsafe-inline'"
+            ],
+            "script-src": [
+                "'self'",
+                "'unsafe-eval'",
+                "'unsafe-inline'"
+            ],
+            "script-src-elem": [
+                "blob:",
+                "'self'",
+                "'unsafe-inline'"
+            ]
+        },
+        useDefaults: true
+    }
+};
+
+const app = express();
 app.use(express.static(staticFilesPath))
   .use(cors())
+  .use(helmet(helmetConfiguration))
   .use(express.urlencoded({ extended: true }));
 
 // Setup Templating Views
 app.set('view engine', 'vash')
   .set('views', viewsFilesPath);
-
-// Set / Unset HTTP Response Headers
-app.use(security.removeInsecureHeaders);
-app.use(security.addSecurityHeaders);
 
 // Home Logic
 app.get('/', home.getHomePage);
